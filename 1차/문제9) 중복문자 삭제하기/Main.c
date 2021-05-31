@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
 char* solution(char* characters) {
 	char* result = malloc(sizeof(char)*strlen(characters));
 	int result_len = 0;
@@ -11,4 +15,10 @@ char* solution(char* characters) {
 	}
 	result[result_len] = NULL;
 	return result;
+}
+int main() {
+    char* characters = "senteeeencccccceeee";
+    char* ret = solution(characters);
+
+    printf("solution 함수의 반환 값은 %s 입니다.\n", ret);
 }

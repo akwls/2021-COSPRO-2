@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 int solution(int purchase[], int purchase_len) {
     int total = 0;
@@ -12,4 +15,11 @@ int solution(int purchase[], int purchase_len) {
             total += 10000;
     }
     return total;
+}
+int main() {
+    int purchase[5] = {150000, 210000, 399990, 990000, 1000000};
+    int purchase_len = 5;
+    int ret = solution(purchase, purchase_len);
+
+    printf("solution 함수의 반환 값은 %d 입니다.\n", ret);
 }
